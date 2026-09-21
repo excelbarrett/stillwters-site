@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StillW_ters</title>
+<meta name="description" content="StillW_ters — books and games by Excel Barrett. Rose Petal, a novella by E.H. Barrett. Kokoro, a one-button rhythm runner, in development.">
+<meta name="theme-color" content="#0b0b0d">
+<meta property="og:title" content="StillW_ters">
+<meta property="og:description" content="Books and games, made in the open.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stillwters.com/">
+<meta property="og:image" content="https://stillwters.com/rose-petal-cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d; --bg2:#111113; --ink:#f4f1ec; --dim:#8d8a85; --line:#222226;
+  --red:#dd2732; --rose:#e4808a;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --beat:400ms; /* 150 BPM, the tempo Kokoro runs at */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(11,11,13,.72);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.stuck{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.mark{font:600 19px/1 var(--serif);letter-spacing:.02em;text-decoration:none;margin-right:auto}
+.mark i{color:var(--red);font-style:normal}
+nav a.link{font-size:14px;color:var(--dim);text-decoration:none;transition:color .2s}
+nav a.link:hover{color:var(--ink)}
+
+/* ---------- hero ---------- */
+header{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.bloom{position:absolute;inset:-20% -10% auto -10%;height:120%;
+  background:radial-gradient(60% 55% at 22% 45%, rgba(221,39,50,.5), rgba(221,39,50,.12) 45%, transparent 72%);
+  filter:blur(60px);animation:breathe 9s ease-in-out infinite;pointer-events:none}
+.bloom.two{inset:auto -20% -30% 30%;height:90%;
+  background:radial-gradient(50% 50% at 60% 50%, rgba(120,30,60,.45), transparent 70%);animation-delay:-4s}
+@keyframes breathe{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.85}50%{transform:translate3d(2%,-2%,0) scale(1.08);opacity:1}}
+.grain{position:absolute;inset:0;opacity:.35;pointer-events:none;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.5'/></svg>")}
+header .wrap{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
+h1{font:300 clamp(52px,11vw,132px)/0.92 var(--serif);margin:0;letter-spacing:-.02em}
+h1 i{color:var(--red);font-style:normal}
+.lede{font:300 clamp(19px,2.4vw,26px)/1.5 var(--serif);color:var(--ink);opacity:.9;max-width:34ch;margin:26px 0 0}
+.sub{color:var(--dim);max-width:46ch;margin:16px 0 0;font-size:16px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:500;transition:transform .2s,background .2s,border-color .2s}
+.btn.primary{background:var(--ink);color:#0b0b0d}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.ghost{border:1px solid #33333a;color:var(--ink)}
+.btn.ghost:hover{border-color:var(--rose);transform:translateY(-2px)}
+.scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;color:var(--dim);font-size:11px;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
+.scroll::after{content:"";width:1px;height:38px;background:linear-gradient(var(--dim),transparent)}
+
+/* ---------- sections ---------- */
+section{padding:110px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin:0 0 34px;display:flex;align-items:center;gap:14px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+.work{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center}
+@media (max-width:820px){.work{grid-template-columns:1fr;gap:34px}}
+.cover{position:relative}
+.cover img{width:100%;height:auto;display:block;border-radius:3px;box-shadow:0 34px 70px rgba(0,0,0,.55);transform:rotate(-1.5deg);transition:transform .5s}
+.cover:hover img{transform:rotate(0) translateY(-6px)}
+h2{font:300 clamp(34px,5vw,54px)/1.05 var(--serif);margin:0 0 6px;letter-spacing:-.01em}
+.byline{color:var(--dim);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 26px}
+blockquote{margin:0 0 24px;padding-left:22px;border-left:2px solid var(--red);font:300 italic clamp(19px,2.2vw,24px)/1.55 var(--serif)}
+.work p{color:#cfcbc5;max-width:56ch}
+.tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-bottom:20px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:beat var(--beat) steps(1,end) infinite}
+@keyframes beat{0%,55%{opacity:1;box-shadow:0 0 0 0 rgba(221,39,50,.55)}56%,100%{opacity:.35;box-shadow:0 0 0 9px rgba(221,39,50,0)}}
+
+/* Kokoro: no invented art. The frame stays empty until Game Studio sends real assets. */
+.pending{display:flex;align-items:center;justify-content:center;height:300px;border-radius:6px;border:1px dashed #2c2c31;background:#101012;color:#5f5c58;font-size:13px;letter-spacing:.04em;text-align:center;padding:24px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- about + footer ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+@media (max-width:820px){.about{grid-template-columns:1fr;gap:26px}}
+.about p{color:#cfcbc5;margin:0 0 16px;font-size:17px}
+.about .big{font:300 clamp(24px,3.4vw,34px)/1.35 var(--serif);color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:46px 0 70px;color:var(--dim);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a class="mark" href="#top">StillW<i>_</i>ters</a>
+  <a class="link" href="#books">Books</a>
+  <a class="link" href="#games">Games</a>
+  <a class="link" href="#about">About</a>
+</div></nav>
+
+<header id="top">
+  <div class="bloom"></div><div class="bloom two"></div><div class="grain"></div>
+  <div class="wrap">
+    <h1>StillW<i>_</i>ters</h1>
+    <p class="lede">A novella that already exists. A game that doesn't yet.</p>
+    <p class="sub">Books and games by Excel Barrett, made in the open and published here as they become real.</p>
+    <div class="cta">
+      <a class="btn primary" href="#books">Read Rose Petal</a>
+      <a class="btn ghost" href="#games">See what's being made</a>
+    </div>
+  </div>
+  <div class="scroll">Scroll</div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <p class="eyebrow">Publishing</p>
+    <div class="work">
+      <div class="cover"><img src="rose-petal-cover.jpg" alt="Cover of Rose Petal by E.H. Barrett: a single red petal on pale paper." width="600" height="900" loading="lazy"></div>
+      <div>
+        <h2>Rose Petal</h2>
+        <p class="byline">A novella · E.H. Barrett</p>
+        <blockquote>"I have always believed that most of a man's life is decided by the things he convinces himself are practical."</blockquote>
+        <p>A man who built a whole life out of keeping his distance takes one train ride that will not let him keep it. Published February 2026.</p>
+        <div class="cta"><a class="btn primary" href="https://www.amazon.com/dp/B0GNMRY7TL">Read it on Kindle</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <div class="wrap">
+    <p class="eyebrow">Games</p>
+    <div class="work">
+      <div class="pending" aria-hidden="true">
+        <span>Art and footage from the build go here.</span>
+      </div>
+      </div>
+      <div>
+        <span class="tag"><span class="dot"></span>In development</span>
+        <h2>Kokoro</h2>
+        <p class="byline">One button · One heartbeat</p>
+        <p>A hooded runner carries a heart shard through a world that has lost its colour. Every tap lands on the beat. The grey stays ahead of him, and the colour comes back behind.</p>
+        <p>It isn't finished, so there's nothing to buy and no date to give. This page will say the day it can be played.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <div class="about">
+      <div>
+        <p class="big">StillW_ters is where the work goes when it's real.</p>
+      </div>
+      <div>
+        <p>Excel Barrett spent years in animation. He writes under <strong>E.H. Barrett</strong> and makes games under StillW_ters.</p>
+        <p>Everything here is either finished and available, or plainly marked as unfinished. Nothing is announced before it exists, and nothing on this page is a promise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>&copy; 2026 StillW_ters</span>
+  <span>Rose Petal is published under E.H. Barrett.</span>
+</div></footer>
+
+<script>
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('stuck', window.scrollY > 24);
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+</script>
+</body>
+</html>
