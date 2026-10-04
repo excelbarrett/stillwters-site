@@ -32,6 +32,8 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(
 nav.stuck{border-color:var(--line)}
 nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
 .mark{font:600 19px/1 var(--serif);letter-spacing:.02em;text-decoration:none;margin-right:auto}
+.mark{display:inline-flex;align-items:center;gap:10px}
+.mark .sw{height:38px;width:auto}
 .mark i{color:var(--red);font-style:normal}
 nav a.link{font-size:14px;color:var(--dim);text-decoration:none;transition:color .2s}
 nav a.link:hover{color:var(--ink)}
@@ -92,11 +94,14 @@ blockquote{margin:0 0 24px;padding-left:22px;border-left:2px solid var(--red);fo
 footer{border-top:1px solid var(--line);padding:46px 0 70px;color:var(--dim);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </style>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_32.png">
+<link rel="apple-touch-icon" href="favicon_180.png">
 </head>
 <body>
 
 <nav id="nav"><div class="wrap">
-  <a class="mark" href="#top">StillW<i>_</i>ters</a>
+  <a class="mark" href="#top"><img src="sw-mark.png" alt="" class="sw"><span>StillW<i>_</i>ters</span></a>
   <a class="link" href="#games">Games</a>
   <a class="link" href="#books">Books</a>
   <a class="link" href="#about">About</a>
