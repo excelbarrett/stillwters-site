@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>StillW_ters</title>
-<meta name="description" content="StillW_ters — books and games by Excel Barrett. Rose Petal, a novella by E.H. Barrett. Kokoro, a one-button rhythm runner, in development.">
+<meta name="description" content="StillW_ters: ideas by Excel Barrett, put out in whatever form fits. Acorn Rain, a free browser game demo. Rose Petal, a novella by E.H. Barrett.">
 <meta name="theme-color" content="#0b0b0d">
 <meta property="og:title" content="StillW_ters">
 <meta property="og:description" content="Books and games, made in the open.">
@@ -65,6 +65,8 @@ section{padding:110px 0;border-top:1px solid var(--line)}
 .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin:0 0 34px;display:flex;align-items:center;gap:14px}
 .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
 .work{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center}
+.work+.work{margin-top:80px}
+.cover img{display:block;width:100%;height:auto}
 @media (max-width:820px){.work{grid-template-columns:1fr;gap:34px}}
 .cover{position:relative}
 .cover img{width:100%;height:auto;display:block;border-radius:3px;box-shadow:0 34px 70px rgba(0,0,0,.55);transform:rotate(-1.5deg);transition:transform .5s}
@@ -95,8 +97,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <nav id="nav"><div class="wrap">
   <a class="mark" href="#top">StillW<i>_</i>ters</a>
-  <a class="link" href="#books">Books</a>
   <a class="link" href="#games">Games</a>
+  <a class="link" href="#books">Books</a>
   <a class="link" href="#about">About</a>
 </div></nav>
 
@@ -104,15 +106,46 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="bloom"></div><div class="bloom two"></div><div class="grain"></div>
   <div class="wrap">
     <h1>StillW<i>_</i>ters</h1>
-    <p class="lede">A novella that already exists. A game that doesn't yet.</p>
-    <p class="sub">Books and games by Excel Barrett, made in the open and published here as they become real.</p>
+    <p class="lede">Everything I make ends up here.</p>
+    <p class="sub">I have ideas, and I put them out in whatever form fits. A book, a game, whatever the idea needs. This is where they land once they're real.</p>
     <div class="cta">
-      <a class="btn primary" href="#books">Read Rose Petal</a>
-      <a class="btn ghost" href="#games">See what's being made</a>
+      <a class="btn primary" href="https://stillw-ters.itch.io/acorn-rain">Play Acorn Rain free</a>
+      <a class="btn ghost" href="#books">Read Rose Petal</a>
     </div>
   </div>
   <div class="scroll">Scroll</div>
 </header>
+
+
+
+<section id="games">
+  <div class="wrap">
+    <p class="eyebrow">Games</p>
+    <div class="work">
+      <div class="cover"><a href="https://stillw-ters.itch.io/acorn-rain"><img src="acorn-rain-cover.png" alt="Acorn Rain: a squirrel stands in a glowing ring, surrounded by a swarm of living acorns." width="630" height="500" loading="lazy"></a></div>
+      <div>
+        <span class="tag"><span class="dot"></span>Free demo out now</span>
+        <h2>Acorn Rain</h2>
+        <p class="byline">Plays in your browser · No download</p>
+        <p>For nine nights, a strange rain of acorns falls, and every acorn it touches wakes up. Alive. Now they're coming for every living thing. One lands on a squirrel. It changes him too, but he still fights for the living. He's the shield between the world and the swarm.</p>
+        <p>There's even a board game hidden in the village.</p>
+        <div class="cta"><a class="btn primary" href="https://stillw-ters.itch.io/acorn-rain">Play the free demo</a></div>
+      </div>
+    </div>
+    <div class="work">
+      <div class="pending" aria-hidden="true">
+        <span>Art and footage from the build go here.</span>
+      </div>
+      <div>
+        <span class="tag"><span class="dot"></span>Paused for now</span>
+        <h2>Kokoro</h2>
+        <p class="byline">One button · One heartbeat</p>
+        <p>A hooded runner carries a heart shard through a world that has lost its colour. Every tap lands on the beat. The grey stays ahead of him, and the colour comes back behind.</p>
+        <p>It's on hold while Acorn Rain gets finished. There's nothing to buy and no date to give. This page will say when it can be played.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="books">
   <div class="wrap">
@@ -130,25 +163,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
-<section id="games">
-  <div class="wrap">
-    <p class="eyebrow">Games</p>
-    <div class="work">
-      <div class="pending" aria-hidden="true">
-        <span>Art and footage from the build go here.</span>
-      </div>
-      </div>
-      <div>
-        <span class="tag"><span class="dot"></span>In development</span>
-        <h2>Kokoro</h2>
-        <p class="byline">One button · One heartbeat</p>
-        <p>A hooded runner carries a heart shard through a world that has lost its colour. Every tap lands on the beat. The grey stays ahead of him, and the colour comes back behind.</p>
-        <p>It isn't finished, so there's nothing to buy and no date to give. This page will say the day it can be played.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="about">
   <div class="wrap">
     <p class="eyebrow">About</p>
@@ -157,7 +171,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <p class="big">StillW_ters is where the work goes when it's real.</p>
       </div>
       <div>
-        <p>Excel Barrett spent years in animation. He writes under <strong>E.H. Barrett</strong> and makes games under StillW_ters.</p>
+        <p>StillW_ters is Excel Barrett. He has ideas and puts them out in whatever form fits: so far a novella, published under <strong>E.H. Barrett</strong>, and a game.</p>
         <p>Everything here is either finished and available, or plainly marked as unfinished. Nothing is announced before it exists, and nothing on this page is a promise.</p>
       </div>
     </div>
@@ -166,7 +180,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <footer><div class="wrap">
   <span>&copy; 2026 StillW_ters</span>
-  <span>Rose Petal is published under E.H. Barrett.</span>
+  <span>Rose Petal is published under E.H. Barrett. Acorn Rain is on itch.io.</span>
 </div></footer>
 
 <script>
